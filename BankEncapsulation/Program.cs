@@ -4,7 +4,7 @@
     {
         public static void Main()
         {
-
+            // Went back and added the BEEP acting as sound for buttons
             // Create a new instance of the BankAccount class
             BankAccount account = new BankAccount();
 
@@ -24,12 +24,14 @@
                 // Read user choice
                 Console.Write("Enter your choice (1/2/3/4): ");
                 string choice = Console.ReadLine();
+                Console.Beep();
 
                 switch (choice)
                 {
                     case "1":
                         // Deposit money
                         Console.Write("Enter amount to deposit: ");
+                        Console.Beep();
                         if (double.TryParse(Console.ReadLine(), out double depositAmount))
                         {
                             account.Deposit(depositAmount);
@@ -44,6 +46,7 @@
                     case "2":
                         //Withdraw money
                     Console.WriteLine("Enter amount to withdraw:");
+                        Console.Beep();
                         var withdrawInput = Console.ReadLine();
                       
                         if (double.TryParse(withdrawInput, out double withDrawAmount))
@@ -73,6 +76,7 @@
                         // Exit the application
                         running = false;
                         Console.WriteLine("Exiting...");
+                        Console.Beep();
                         break;
 
                     default:
