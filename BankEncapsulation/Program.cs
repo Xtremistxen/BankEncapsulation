@@ -23,7 +23,7 @@
 
                 // Read user choice
                 Console.Write("Enter your choice (1/2/3/4): ");
-                string choice = Console.ReadLine();
+                var choice = Console.ReadLine();
                 Console.Beep();
 
                 switch (choice)
